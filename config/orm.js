@@ -41,7 +41,7 @@ var orm = {
                 tempArray.push(key + "=" + value);
             }
         }
-        queryString += tempArray.toString() + " WHERE " + condition;
+        queryString += tempArray.toString() + " WHERE " + theCondition;
 
         console.log(queryString);
 
@@ -62,7 +62,6 @@ var orm = {
             if (err) {
                 throw err;
             }
-
             theCallBack(result);
         });
     }
